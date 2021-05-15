@@ -41,14 +41,15 @@
 
             camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.1, 100000 );
             // camera.position.set( 39505, -5679, -16009 );
-            camera.position.set( 39505, 6444, -15968 );
+            //camera.position.set( 39505, 6444, -15968 );
+            camera.position.set(0, 150, 320);
             // camera.lookAt( 0, 3, 0 );
 
             
             const controls = new OrbitControls(camera, container);
 
             scene = new THREE.Scene();
-            scene.background = new THREE.Color('peachpuff').convertSRGBToLinear();
+            scene.background = new THREE.Color('skyblue').convertSRGBToLinear();
 
             clock = new THREE.Clock();
 
@@ -67,7 +68,7 @@
 
             const loader = new ColladaLoader( loadingManager );
            // loader.load( './catedral.dae', function ( collada ) {
-            loader.load( './blender/untitled.dae', function ( collada ) {
+            loader.load( './blender1/untitled.dae', function ( collada ) {
                 catedral = collada.scene;
                 catedral.position.set(0, 0, 0);
                 catedral.scale.set(10, 10, 10);
